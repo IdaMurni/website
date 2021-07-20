@@ -35,7 +35,7 @@ export default function Parallax(props) {
     var windowScrollTop = window.pageYOffset / 3;
     setTransform("translate3d(0," + windowScrollTop + "px,0)");
   };
-  const { filter, className, children, style, image, small } = props;
+  const { filter, className, children, style, small } = props;
   const classes = useStyles();
   const parallaxClasses = classNames({
     [classes.parallax]: true,
@@ -48,7 +48,7 @@ export default function Parallax(props) {
       className={parallaxClasses}
       style={{
         ...style,
-        backgroundImage: "url(" + image + ")",
+        background: 'linear-gradient(to right, rgb(21, 87, 153), rgb(21, 153, 87))',
         transform: transform,
       }}
     >
@@ -62,6 +62,5 @@ Parallax.propTypes = {
   filter: PropTypes.bool,
   children: PropTypes.node,
   style: PropTypes.string,
-  image: PropTypes.string,
   small: PropTypes.bool,
 };

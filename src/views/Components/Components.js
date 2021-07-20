@@ -15,6 +15,7 @@ import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
+import WhyIdaMurni from "./Sections/WhyIdaMurni.js";
 import SectionBasics from "./Sections/SectionBasics.js";
 import SectionNavbars from "./Sections/SectionNavbars.js";
 import SectionTabs from "./Sections/SectionTabs.js";
@@ -27,6 +28,7 @@ import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
 import SectionLogin from "./Sections/SectionLogin.js";
 import SectionExamples from "./Sections/SectionExamples.js";
 import SectionDownload from "./Sections/SectionDownload.js";
+import logo from 'assets/img/ida_murni_master.png'
 
 import styles from "assets/jss/material-kit-react/views/components.js";
 
@@ -38,7 +40,7 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand="Material Kit React"
+        brand="IdaMurni"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
@@ -48,14 +50,15 @@ export default function Components(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/bg4.jpg").default}>
+      <Parallax>
         <div className={classes.container}>
+        <img src={logo} style={{width: 200, display: 'block', margin: '0 auto'}}/>
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}>Material Kit React.</h1>
+                <h1 className={classes.title}>IdaMurni</h1>
                 <h3 className={classes.subtitle}>
-                  A Badass Material-UI Kit based on Material Design.
+                  A Badass Protocol Ethereum
                 </h3>
               </div>
             </GridItem>
@@ -64,6 +67,7 @@ export default function Components(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
+        <WhyIdaMurni />
         <SectionBasics />
         <SectionNavbars />
         <SectionTabs />
