@@ -23,82 +23,40 @@ import Paginations from "components/Pagination/Pagination.js";
 import Badge from "components/Badge/Badge.js";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
+import classNames from "classnames";
 
 const useStyles = makeStyles(styles);
 
 export default function WhyIdaMurni() {
   const classes = useStyles();
-  const [checked, setChecked] = React.useState([24, 22]);
-  const [selectedEnabled, setSelectedEnabled] = React.useState("b");
-  const [checkedA, setCheckedA] = React.useState(true);
-  const [checkedB, setCheckedB] = React.useState(false);
-  React.useEffect(() => {
-    if (
-      !document
-        .getElementById("sliderRegular")
-        .classList.contains("noUi-target")
-    ) {
-      Slider.create(document.getElementById("sliderRegular"), {
-        start: [40],
-        connect: [true, false],
-        step: 1,
-        range: { min: 0, max: 100 },
-      });
-    }
-    if (
-      !document.getElementById("sliderDouble").classList.contains("noUi-target")
-    ) {
-      Slider.create(document.getElementById("sliderDouble"), {
-        start: [20, 60],
-        connect: [false, true, false],
-        step: 1,
-        range: { min: 0, max: 100 },
-      });
-    }
-    return function cleanup() {};
-  });
-  const handleToggle = (value) => {
-    const currentIndex = checked.indexOf(value);
-    const newChecked = [...checked];
-
-    if (currentIndex === -1) {
-      newChecked.push(value);
-    } else {
-      newChecked.splice(currentIndex, 1);
-    }
-    setChecked(newChecked);
-  };
   return (
-    <div className={classes.sections} id="why">
+    <div className={classes.sections} id="home">
       <div className={classes.container}>
-        <div className={classes.title}>
-          <h2 id="why">Why IdaMurni</h2>
-        </div>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         <GridContainer>
-            <GridItem xs={12} sm={12} md={3}>
+            <GridItem xs={12} sm={12} md={3} style={{textAlign: 'center'}}>
               <div className={classes.title}>
                 <h3>Total Supply</h3>
               </div>
-              <p class="text-white font-size-38">1,619,953</p> <p class="text-white font-size-21 m-0">ACCOUNTS</p>
+              <p style={{fontSize: 22, fontWeight: 700}}>1,619,953</p> <p className="text-white font-size-21 m-0">TOKENS</p>
             </GridItem>
-            <GridItem xs={12} sm={12} md={3}>
+            <GridItem xs={12} sm={12} md={3} style={{textAlign: 'center'}}>
               <div className={classes.title}>
                 <h3>Token Holder</h3>
               </div>
-              <p class="text-white font-size-38">1,619,953</p> <p class="text-white font-size-21 m-0">ACCOUNTS</p>
+              <p style={{fontSize: 22, fontWeight: 700}}>1,619,953</p> <p className="text-white font-size-21 m-0">ACCOUNTS</p>
             </GridItem>
-            <GridItem xs={12} sm={12} md={3}>
+            <GridItem xs={12} sm={12} md={3} style={{textAlign: 'center'}}>
               <div className={classes.title}>
                 <h3>Liquidity Provided</h3>
               </div>
-              <p class="text-white font-size-38">1,619,953</p> <p class="text-white font-size-21 m-0">ACCOUNTS</p>
+              <p style={{fontSize: 22, fontWeight: 700}}>1,619,953</p> <p className="text-white font-size-21 m-0">LIQUIDITY</p>
             </GridItem>
-            <GridItem xs={12} sm={12} md={3}>
+            <GridItem xs={12} sm={12} md={3} style={{textAlign: 'center'}}>
               <div className={classes.title}>
                 <h3>Token Burn</h3>
               </div>
-              <p class="text-white font-size-38">1,619,953</p> <p class="text-white font-size-21 m-0">ACCOUNTS</p>
+              <p style={{fontSize: 22, fontWeight: 700}}>1,619,953</p> <p className="text-white font-size-21 m-0">TOKENS</p>
             </GridItem>
           </GridContainer>
       </div>

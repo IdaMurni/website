@@ -15,13 +15,13 @@ import styles from "assets/jss/material-kit-react/views/componentsSections/tabsS
 
 const useStyles = makeStyles(styles);
 
-export default function SectionTabs() {
+export default function Market() {
   const classes = useStyles();
   return (
-    <div className={classes.section}>
+    <div className={classes.section} id="market" style={{background: '#28ca9d'}}>
       <div className={classes.container}>
         <div id="nav-tabs">
-          <h3>Navigation Tabs</h3>
+          <h3>Market</h3>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
               <h3>
