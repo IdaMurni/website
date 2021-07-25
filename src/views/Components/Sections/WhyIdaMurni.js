@@ -32,13 +32,15 @@ export default function WhyIdaMurni() {
   return (
     <div className={classes.sections} id="home">
       <div className={classes.container}>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <p style={{textAlign: 'center'}}>IdaMurni release the first project in 2021 with total supply of 7.9 billions IDA considering the world populations
+            in 2021. 
+        </p>
         <GridContainer>
             <GridItem xs={12} sm={12} md={3} style={{textAlign: 'center'}}>
               <div className={classes.title}>
                 <h3>Total Supply</h3>
               </div>
-              <p style={{fontSize: 22, fontWeight: 700}}>1,619,953</p> <p className="text-white font-size-21 m-0">TOKENS</p>
+              <p style={{fontSize: 22, fontWeight: 700}}>7.900.000.000</p> <p className="text-white font-size-21 m-0">TOKENS</p>
             </GridItem>
             <GridItem xs={12} sm={12} md={3} style={{textAlign: 'center'}}>
               <div className={classes.title}>

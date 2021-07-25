@@ -19,9 +19,9 @@ export default function WhereToBuy() {
         <div className={classes.sections} id="buy">
         <div className={classes.container}>
             <div className={classes.title}>
-                <h2>Where can i get IdaMurni</h2>
+                <h2>How can i get IdaMurni</h2>
             </div>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p>Actually you cannot buy IDA tokens, but you have opportunity to exchange again another exciting ERC20 tokens. there is a coupple places where you can get IDA tokens, visit decentralized exchange devethswap and devethwallet. swap any exiting token to IDA.</p>
             <GridContainer>
                 <GridItem xs={12} sm={12} md={3} style={{textAlign: 'center'}}>
                 <div className={classes.title}>
