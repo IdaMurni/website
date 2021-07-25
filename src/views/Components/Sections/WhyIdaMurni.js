@@ -31,7 +31,6 @@ export default function WhyIdaMurni() {
   const classes = useStyles();
   return (
     <div className={classes.sections} id="home">
-      <div className={classes.container}>
         <p style={{textAlign: 'center'}}>IdaMurni release the first project in 2021 with total supply of 7.9 billions IDA considering the world populations
             in 2021. 
         </p>
@@ -61,7 +60,6 @@ export default function WhyIdaMurni() {
               <p style={{fontSize: 22, fontWeight: 700}}>1,619,953</p> <p className="text-white font-size-21 m-0">TOKENS</p>
             </GridItem>
           </GridContainer>
-      </div>
     </div>
   );
 }

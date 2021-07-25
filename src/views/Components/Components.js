@@ -55,10 +55,12 @@ export default function Components(props) {
           </GridContainer>
         </div>
       </Parallax>
-
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <WhyIdaMurni />
+      <div className={classes.container}>
+        <div className={classNames(classes.main, classes.mainRaised)}>
+          <WhyIdaMurni />
+        </div>
       </div>
+
       <WhereToBuy />
       <Market />
       <Dapps />
