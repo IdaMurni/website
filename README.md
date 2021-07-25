@@ -5,4 +5,4 @@
   <img src="https://github.com/IdaMurni/website/blob/main/src/assets/img/ida_murni_master.png" width="200"/>
 </p>
 
-initial commit...
+IdaMurni release the first project in 2021 with total supply of 7.9 billions IDA considering the world populations in 2021.
