@@ -35,7 +35,7 @@ export default function HeaderLinks(props) {
         className={classes.navLink}
         color="transparent"
         >
-          Market
+          Markets
       </Button>
       <Button 
         href="#dapps"

@@ -21,7 +21,7 @@ export default function Market() {
     <div className={classes.section} id="market" style={{background: '#28ca9d'}}>
       <div className={classes.container}>
         <div id="nav-tabs">
-          <h3>Market</h3>
+          <h3>Markets</h3>
           <h3 style={{textAlign: 'center'}}>since we are new, we don't have any proper market to trade IdaMurni. but hoppefully soon!</h3>
         </div>
       </div>

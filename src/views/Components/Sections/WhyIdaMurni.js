@@ -16,7 +16,7 @@ const useStyles = makeStyles(styles);
 export default function WhyIdaMurni() {
     const provider = new ethers.providers.JsonRpcProvider('https://rpc.deveth.org');
     const signer = provider.getSigner()
-    console.log('signer', signer)
+    // console.log('signer', signer)
     const [holder, setHolder] = useState(0);
     const [burn, setBurn] = useState(0);
 
@@ -46,7 +46,6 @@ export default function WhyIdaMurni() {
         const balance = await daiContract.balanceOf('0x62b06E4Fdd628759fda1c2aB3bb4687E86e0eAf0')
         setHolder(7900000000 - ethers.utils.formatUnits(balance, 18))
         setBurn((5 / 100) * (7900000000 - ethers.utils.formatUnits(balance, 18)))
-        console.log('balance', 7900000000 - ethers.utils.formatUnits(balance, 18))
         return daiContract.balanceOf('0x62b06E4Fdd628759fda1c2aB3bb4687E86e0eAf0')
 
     }
@@ -60,29 +59,23 @@ export default function WhyIdaMurni() {
                 in 2021. 
             </p>
             <GridContainer>
-                <GridItem xs={12} sm={12} md={3} style={{textAlign: 'center'}}>
+                <GridItem xs={12} sm={12} md={4} style={{textAlign: 'center'}}>
                 <div className={classes.title}>
                     <h3>Total Supply</h3>
                 </div>
                 <p style={{fontSize: 22, fontWeight: 700}}>7.900.000.000</p> <p className="text-white font-size-21 m-0">TOKENS</p>
                 </GridItem>
-                <GridItem xs={12} sm={12} md={3} style={{textAlign: 'center'}}>
-                <div className={classes.title}>
-                    <h3>Token Holder</h3>
-                </div>
-                <p style={{fontSize: 22, fontWeight: 700}}>{holder}</p> <p className="text-white font-size-21 m-0">TOKENS</p>
-                </GridItem>
-                <GridItem xs={12} sm={12} md={3} style={{textAlign: 'center'}}>
+                <GridItem xs={12} sm={12} md={4} style={{textAlign: 'center'}}>
                 <div className={classes.title}>
                     <h3>Liquidity Provided</h3>
                 </div>
-                <p style={{fontSize: 22, fontWeight: 700}}>{burn}</p> <p className="text-white font-size-21 m-0">LIQUIDITY</p>
+                <p style={{fontSize: 22, fontWeight: 700}}>{holder.toFixed(2)}</p> <p className="text-white font-size-21 m-0">LIQUIDITY</p>
                 </GridItem>
-                <GridItem xs={12} sm={12} md={3} style={{textAlign: 'center'}}>
+                <GridItem xs={12} sm={12} md={4} style={{textAlign: 'center'}}>
                 <div className={classes.title}>
                     <h3>Token Burn</h3>
                 </div>
-                <p style={{fontSize: 22, fontWeight: 700}}>{burn}</p> <p className="text-white font-size-21 m-0">TOKENS</p>
+                <p style={{fontSize: 22, fontWeight: 700}}>{burn.toFixed(2)}</p> <p className="text-white font-size-21 m-0">TOKENS</p>
                 </GridItem>
             </GridContainer>
         </div>
