@@ -17,12 +17,13 @@ export default function WhyIdaMurni() {
     const provider = new ethers.providers.JsonRpcProvider('https://rpc.deveth.org');
     const signer = provider.getSigner()
     // console.log('signer', signer)
-    const [holder, setHolder] = useState(0);
+    const [liquidity, setLiquidity] = useState(0);
     const [burn, setBurn] = useState(0);
+    const [total, setTotal] = useState(0)
 
     const  getIdaToken = async() => {
         // You can also use an ENS name for the contract address
-        const daiAddress = "0x505071eBf3b9c2867E5770E27D0c5B81f4F80E45";
+        const daiAddress = "0xCEc9E27a031632d8D29E6d2F91427Ca0F9370C28";
 
         // The ERC-20 Contract ABI, which is a common contract interface
         // for tokens (this is the Human-Readable ABI format)
@@ -44,8 +45,16 @@ export default function WhyIdaMurni() {
         // The Contract object
         const daiContract = new ethers.Contract(daiAddress, daiAbi, provider);
         const balance = await daiContract.balanceOf('0x62b06E4Fdd628759fda1c2aB3bb4687E86e0eAf0')
-        setHolder(7900000000 - ethers.utils.formatUnits(balance, 18))
-        setBurn((5 / 100) * (7900000000 - ethers.utils.formatUnits(balance, 18)))
+        setTotal(ethers.utils.formatUnits(balance, 18))
+        // console.log('balance', total)
+        setLiquidity(7900000000 - ethers.utils.formatUnits(balance, 18))
+        /**
+         * total liquidity 42.000.000
+         * 5% of 42.000.000
+         * (5 / 100) * 42000000 = 2100000
+         */
+        const TotalTokensBurn = (5 / 100) * 42000000
+        setBurn(TotalTokensBurn - (5 / 100) * (liquidity))
         return daiContract.balanceOf('0x62b06E4Fdd628759fda1c2aB3bb4687E86e0eAf0')
 
     }
@@ -69,7 +78,7 @@ export default function WhyIdaMurni() {
                 <div className={classes.title}>
                     <h3>Liquidity Provided</h3>
                 </div>
-                <p style={{fontSize: 22, fontWeight: 700}}>{holder.toFixed(2)}</p> <p className="text-white font-size-21 m-0">LIQUIDITY</p>
+                <p style={{fontSize: 22, fontWeight: 700}}>{liquidity.toFixed(2)}</p> <p className="text-white font-size-21 m-0">LIQUIDITY</p>
                 </GridItem>
                 <GridItem xs={12} sm={12} md={4} style={{textAlign: 'center'}}>
                 <div className={classes.title}>

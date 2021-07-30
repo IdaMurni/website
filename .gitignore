@@ -4,3 +4,4 @@ ISSUE_TEMPLATE.md
 package-lock.json
 Documentation
 .DS_Store
+build/
